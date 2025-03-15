@@ -2,12 +2,12 @@
 public class Recursion {
 
     // Recursive method to calculate factorial of a number
-    public static void factorial(int n) {
+    public static void printNum(int n) {
         if(n==0){
             return ;
         }
         System.out.println(n);
-          factorial(n - 1); // Recursive case
+        printNum(n - 1); // Recursive case
           
         
     }
@@ -20,11 +20,20 @@ public class Recursion {
         sum = sum + i;
         natural(i + 1, n, sum);
     }
-
+public static void fabonacci(int a, int b, int f) {
+    if (f == 0) {
+        return;
+    }
+    int c = a + b;
+    System.out.println(c);
+    fabonacci(b, c, f - 1); // Decrement f by 1 for correct recursion
+}
     public static void main(String[] args) {
         int n = 5;
-        factorial(n);
-        
-        
+        printNum(n);
         natural(1, 5, 0);
-}}
+        int f=7;
+        fabonacci(0,1,f);
+        fabonacci(0, 1, f);
+            }
+        }
